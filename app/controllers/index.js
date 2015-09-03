@@ -12,7 +12,7 @@ var broadcastReceiver = Ti.Android.createBroadcastReceiver({
 	}
 });
 
-Ti.Android.registerBroadcastReceiver(broadcastReceiver, ['com.familydollar.invpricing.RECVR']);	
+Ti.Android.registerBroadcastReceiver(broadcastReceiver, ['com.yourdomain.yourProject.RECVR']);	
 
 /** Initialization Function **/
 (function init(){
