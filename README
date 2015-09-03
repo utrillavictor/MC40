@@ -1,18 +1,42 @@
-Welcome to your Appcelerator Titanium Mobile Project
+# MC40 using Broadcast Intent.
 
-This is a blank project.  Start by editing your application's app.js to 
-make your first mobile project using Titanium.
+Sample appcelerator project running on MC40 devices.
 
+<sdk-version>3.4.1.GA</sdk-version>
 
+## How to configure your Appcelerator Project
 
-----------------------------------
-Stuff our legal folk make us say:
+Add the intent filter to your MainActivity, can be something as this in your `tiapp.xml` file:
 
-Appcelerator, Appcelerator Titanium and associated marks and logos are 
-trademarks of Appcelerator, Inc. 
+~~~~
+    <activity android:name=".McActivity" android:label="@string/app_name" android:theme="@style/Theme.Titanium" android:configChanges="keyboardHidden|orientation|screenSize">
+	<intent-filter>
+	    <action android:name="android.intent.action.MAIN"/>
+	    <category android:name="android.intent.category.LAUNCHER"/>
+	</intent-filter>
+	<intent-filter>
+	    <action android:name="com.yourdomain.yourProject.RECVR"/>
+	    <category android:name="android.intent.category.DEFAULT"/>
+	</intent-filter>
+    </activity>
+~~~~
 
-Titanium is Copyright (c) 2008-2013 by Appcelerator, Inc. All Rights Reserved.
+## How to configure your DataWedge
 
-Titanium is licensed under the Apache Public License (Version 2). Please
-see the LICENSE file for the full license.
+Create a new Profile and use the same intent action name defined in your `tiapp.xml`. Set the new
+Profile:
+
+*Profile enabled (checked)
+*Applications - Associated apps (link your appcelerator project using org.appcelerator.titanium.TiActivity)
+*Barcode Input - Enabled (checked)
+*Intent Output - Enabled (checked)
+*Intent action needs to be set as:
+
+~~~~
+com.yourdomain.yourProject.RECVR
+~~~~
+
+Leave the Intent Category in blank and set the Intent delivery as:
+
+* Broadcast intent
 
