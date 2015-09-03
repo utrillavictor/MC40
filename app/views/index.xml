@@ -1,0 +1,6 @@
+<Alloy>
+	<Window class="container">
+		<Button height="12.61%" id="Button_1"/>
+		<TextArea height="48.85%" id="responseTxt"/>
+	</Window>
+</Alloy>

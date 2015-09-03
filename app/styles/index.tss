@@ -1,0 +1,20 @@
+".container": {
+	"backgroundColor": "white"
+},
+
+"#Button_1": {
+	"title": "Broadcast Message",
+	"left": "5.00%",
+	"top": "18.58%",
+	"backgroundColor": "#006ca2",
+	"color": "#ffffff",
+	"font": { fontSize: '18', fontFamily: 'Arial', fontStyle: '', fontWeight: ''},
+	"right": "5%",
+},
+"#responseTxt": {
+	"color":"#000",
+	"left": "5%",
+	"top": "41.06%",
+	"height": "30%",
+	"right": "5%"
+}
